@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Wikipedia Copy Cleaner",
+    "version": "1.0",
+
+    "description": "Removes citation numbers from the clipboard contents when copying from Wikipedia.",
+
+    "icons": {
+        "48": "icons/48.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.wikipedia.org/*"],
+            "js": ["wcc.js"]
+        }
+    ],
+
+    "permissions": [
+        "*://*.wikipedia.org/*",
+        "clipboardWrite"
+      ]
+}
